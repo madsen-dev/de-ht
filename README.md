@@ -51,7 +51,7 @@ This folder contains two different approaches to solving a string character uniq
 
 **Technologies:** Python
 
-### Tests (`/tests`)
+#### Tests (`/programming/tests`)
 
 Contains test suites for both programming solutions to ensure correctness and reliability.
 

@@ -49,13 +49,13 @@ This folder contains two different approaches to solving a string character uniq
 - **Simple**: Quick implementation, readable code, handles short-to-medium strings efficiently
 - **Advanced**: Better performance on long strings due to early termination, provides additional insights (unique/non-unique character breakdown)
 
-**Technologies:** Python
-
 #### Tests (`/programming/tests`)
 
 Contains test suites for both programming solutions to ensure correctness and reliability.
 
 **Note:** Test cases were generated using AI assistance to improve development efficiency and coverage.
+
+**Technologies:** Python, pytest
 
 ### Data Engineering (`/data-engineering`)
 

@@ -4,7 +4,9 @@ import duckdb
 con = duckdb.connect()
 
 result = con.execute("""
-    SELECT c.name, SUM(i.amount_sek) AS total_amount
+    SELECT 
+        c.name, 
+        SUM(i.amount_sek) AS total_amount
     FROM 'invoices.csv' i
     JOIN 'countries.csv' c ON c.id = i.country_id
     GROUP BY c.name

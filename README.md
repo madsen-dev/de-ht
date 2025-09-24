@@ -1,6 +1,6 @@
 # Home Task - Data Engineering Solution
 
-This repository contains solutions for a home task focused on data engineering concepts, including data analytics and programming challenges.
+This repository contains solutions for a home task focused on data engineering.
 
 ## Prerequisites
 
@@ -33,7 +33,7 @@ This folder contains data generation and analysis script.
 - `generate_data.py` - Generates sample data (100 invoices and 10 countries) and saves to `invoices.csv`
 - `sql_top_5_countries.py` - Performs SQL-based analysis using DuckDB, pandas, and numpy to find top 5 countries
 
-**Technologies:** DuckDB, Pandas, NumPy
+**Technologies:** Python, SQL, DuckDB, Pandas, NumPy
 
 ### Programming (`/programming`)
 
@@ -48,6 +48,8 @@ This folder contains two different approaches to solving a string character uniq
 
 - **Simple**: Quick implementation, readable code, handles short-to-medium strings efficiently
 - **Advanced**: Better performance on long strings due to early termination, provides additional insights (unique/non-unique character breakdown)
+
+**Technologies:** Python
 
 ### Tests (`/tests`)
 
@@ -96,15 +98,15 @@ Contains test suites for both programming solutions to ensure correctness and re
 
 ## Technology Stack
 
-- **Python 3.12.3** - Core programming language
-- **DuckDB** - In-process SQL OLAP database for analytics
-- **Pandas** - Data manipulation and analysis
-- **NumPy** - Numerical computing
-- **Virtual Environment** - Dependency management
+- **Python 3.12.3**
+- **SQL**
+- **DuckDB**
+- **Pandas**
+- **NumPy**
 
 ## Solution Philosophy
 
-This repository demonstrates different approaches to problem-solving in data engineering:
+This solution demonstrates different approaches to problem-solving in data engineering:
 
 - **Simplicity vs. Optimization** - Comparing straightforward implementations with performance-optimized solutions
 - **Modern Data Tools** - Leveraging DuckDB for efficient SQL-based analytics

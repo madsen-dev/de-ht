@@ -18,16 +18,17 @@ Make the _Invoices_ and _Countries_ tables available for consumption through the
 
 ## Proposed Solution
 
-### 1. Extraction (Bronze)
+### 1. Extraction (Batch, Bronze)
 
 - **dlt (data load tool)** ingests the _Invoices_ and _Countries_ tables from the source systems into the lakehouse.
 - Data is stored in the **Databricks Lakehouse (Delta/Parquet format)** as the raw bronze layer.
 
 **Alternative Ingestion Solutions:**
 
-- **Azure Data Factory (ADF)**
+- **Azure Data Factory**
 - **Airbyte**
 - **Fivetran**
+- **Apache Kafka** - event-based streaming for near real-time ingestion instead of batch processing
 
 ### 2. Processing (Silver)
 

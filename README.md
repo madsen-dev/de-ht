@@ -42,7 +42,8 @@ This folder contains two different approaches to solving a string character uniq
 **Files:**
 
 - `simple_is_string_characters_unique.py` - Simple, readable solution that's quick to implement but less efficient for long strings
-- `advanced_is_string_characters_unique.py` - Optimized solution with early exit capability for better performance on long strings. Also returns both unique and non-unique characters
+- `advanced_is_string_characters_unique.py` - Optimized solution with early exit capability for better performance on long strings.
+  In this implementation, the entire string is processed to also return both unique and non-unique characters for visualization.
 
 **Key Differences:**
 

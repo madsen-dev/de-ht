@@ -2,9 +2,9 @@
 
 This repository contains solutions for a home task focused on data engineering.
 
-## Prerequisites
+## Prerequisites (What I used)
 
-- Python 3.12.3
+- Python 3.13.2
 - Virtual environment (recommended)
 
 ## Setup
@@ -99,7 +99,7 @@ Contains test suites for both programming solutions to ensure correctness and re
 
 ## Technology Stack
 
-- **Python 3.12.3**
+- **Python 3.13.2**
 - **SQL**
 - **DuckDB**
 - **Pandas**

@@ -13,7 +13,7 @@ This repository contains solutions for a home task focused on data engineering.
 
 ```bash
 python3 -m venv venv
-source venv/bin/activate  # On Windows: venv\Scripts\activate
+source venv/bin/activate
 ```
 
 2. Install the required dependencies for analytics:

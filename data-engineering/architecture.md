@@ -20,8 +20,14 @@ Make the _Invoices_ and _Countries_ tables available for consumption through the
 
 ### 1. Extraction (Bronze)
 
-- **Azure Data Factory (ADF)** extracts the _Invoices_ and _Countries_ tables from the source systems.
+- **dlt (data load tool)** ingests the _Invoices_ and _Countries_ tables from the source systems into the lakehouse.
 - Data is stored in the **Databricks Lakehouse (Delta/Parquet format)** as the raw bronze layer.
+
+**Alternative Ingestion Solutions:**
+
+- **Azure Data Factory (ADF)**
+- **Airbyte**
+- **Fivetran**
 
 ### 2. Processing (Silver)
 
@@ -41,14 +47,19 @@ Make the _Invoices_ and _Countries_ tables available for consumption through the
 - **Power BI** connects directly to the gold layer in Databricks (via SQL endpoints).
 - Analysts can explore invoices by country, trends, and drill down to individual invoices.
 
+**Alternative Visualization Tools:**
+
+- **Steep**
+- **Evidence.dev**
+
 ### 5. Orchestration
 
 - **Airflow DAGs** orchestrate the pipeline end-to-end:
 
-  - Trigger ADF extraction
-  - Run Databricks Spark jobs for processing
-  - Execute dbt transformations
-  - Refresh Power BI datasets (if needed).
+  - Trigger dlt ingestion.
+  - Run Databricks Spark jobs for processing.
+  - Execute dbt transformations.
+  - Refresh Power BI (or other BI tool) datasets if needed.
 
 - **Airflow Setup**:
   - **Error handling & retry logic** to make the pipeline resilient to temporary failures.
@@ -61,6 +72,6 @@ Make the _Invoices_ and _Countries_ tables available for consumption through the
 
 The pipeline is orchestrated by **Airflow**, which triggers and manages all steps:
 
-**Source → Bronze Layer (ADF) → Silver Layer (Databricks Spark) → Gold Layer (dbt) → Power BI**
+**Source → Bronze Layer (dlt) → Silver Layer (Databricks Spark) → Gold Layer (dbt) → BI Tools (Power BI, Steep, Evidence.dev)**
 
 Airflow handles scheduling, retries, and alerting across all layers, ensuring a reliable and automated data flow.
